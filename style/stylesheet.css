@@ -1,8 +1,14 @@
+html{
+    height: 100%;
+    width: 100%;
+}
 .container{
     display: grid;
     font-family: 'Indie Flower', cursive;
     color: #555169;
     margin: 0;
+    width: 100%;
+    height: 100%;
     
 }
 .notes{
@@ -22,7 +28,15 @@ nav h2{
     text-align: right;
 }
 footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     text-align: center;
 }
-#save-button, #cancel-button{
-    float:right;
+.alignR{
+    text-align: right;
+}
+#Dark-button{
+    float: right;
+}
