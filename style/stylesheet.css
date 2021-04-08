@@ -35,8 +35,48 @@ footer{
     text-align: center;
 }
 .alignR{
+
     text-align: right;
 }
-#Dark-button{
-    float: right;
+.flex-new{
+    display: inline-flex;
+    width: 100%;
+    justify-content: flex-start;
 }
+.button{
+    align-self: right;
+    transition-duration: 0.4s;
+    border: 2px solid grey;
+    color: white;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    background-color:rgb(62, 159, 207) ;
+    border-radius: 12px;
+    font-family: 'Indie Flower', cursive;
+    font:bolder;
+}
+.Dark-button{
+    background-color: rgb(70, 6, 116);
+    justify-self: flex-end;
+    margin-left: auto;
+
+}
+.cancel-button{
+    background-color: rgb(196, 68, 45);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
