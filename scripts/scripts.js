@@ -79,7 +79,7 @@ function save(){
     newnte.body = txtara.value;
 
     notesArray.push(newnte);
-    console.log(notesArray);
+    //console.log(notesArray);
 
 
     let newli = document.createElement("li");
@@ -87,12 +87,22 @@ function save(){
     newli.textContent = newnte.title;
     txtara.value = newnte.body;
 
-    
 }
 
-function list_search(){
-    //search through notesArray and find object usig title, then display text in tex area
+const nt1 = document.querySelector("#listnotes");
 
+function list_search(event){
+    let temp = event.target.textContent;
+    
+    for(let ne of notesArray){
+        
+        if(ne.title == temp){
+            txtara.value = ne.body;
+        }
+    }
+
+    
+    
 }
 
 
@@ -100,5 +110,5 @@ drkbtn.addEventListener("click",dark2light2dark);
 cnclbtn.addEventListener("click",cancel);
 nwbtn.addEventListener("click",New_Note);
 svebtn.addEventListener("click",save);
-
+nt1.addEventListener("click",list_search);
 
