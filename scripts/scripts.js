@@ -10,9 +10,6 @@ let note2 = {
 
 let notesArray = [note1,note2];
 
-
-//console.log(drkbtn);
-
 const drkbtn = document.querySelector(".Dark-button");
 const bcknotes = document.querySelector(".notes");
 const bcktext = document.querySelector(".textbox");
@@ -70,12 +67,15 @@ function New_Note(){
 
 }
 
-
-
 function save(){
     alert("You are trying to save your note.");
     let title = prompt("Please enter the note's title");
+    note2.title = title;
+    note2.body = txtara.value;
 
+    console.log(note2.title);
+    console.log(note2.body);
+    
     
 }
 
