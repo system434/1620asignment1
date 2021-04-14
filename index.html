@@ -10,6 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
         <title>NOTE TAKING</title>
         <meta charset="utf-8">
+        <script src="scripts/scripts.js" defer></script>
 
     </head>
 
@@ -19,7 +20,7 @@
             <h1>My Notes</h1>
 
             <nav>
-                <ul>
+                <ul id="listnotes">
                     <li>note one</li>
                     <li>note one</li>
                 </ul>
@@ -44,15 +45,14 @@
                 New Note
                 </button>
 
-                <button class="button Dark-button">
+                <button class="button Dark-button" id="Drkbtn">
                     Dark Theme
                 </button>
             </div>
             
 
             <section>
-                <textarea class="note" name="note"rows="5" cols="70">This is a placeholder
-                </textarea>
+                <textarea class="note" name="note"rows="5" cols="70">Write Notes here</textarea>
             </section>
 
             <div class="alignR">

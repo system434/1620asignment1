@@ -1,30 +1,74 @@
-function dark_theme(){
-    //when button click
-        //background color of side bar, textarea, and button change to darker colors
-        //text on dark theme change to light theme
+
+
+
+
+
+
+
+//console.log(drkbtn);
+
+
+const drkbtn = document.querySelector(".Dark-button");
+const bcknotes = document.querySelector(".notes");
+const bcktext = document.querySelector(".textbox");
+const dkfont = document.querySelector(".container");
+
+function dark2light2dark(){
+    //console.log(event);
+    if(drkbtn.textContent == "Light Theme"){
+        changetolight();
+    }
+    else{
+        changetodark();
+    }
+
 }
 
-function light_theme(){
-    //when button click
-        ////background color of side bar, textarea, and button change back to normal
-        //text on dark theme change to dark theme
+function changetodark(){
+    console.log("changed 2 dark");
+    drkbtn.textContent = "Light Theme";
+    bcknotes.style.backgroundColor = "#2979A4";
+    bcktext.style.backgroundColor = "#213677";
+    dkfont.style.color = "black";
+
 }
+
+function changetolight(){
+    console.log("changed 2 light");
+    drkbtn.textContent = "Dark Theme";
+    bcknotes.style.backgroundColor = "#F9E0BD";
+    bcktext.style.backgroundColor = "#F6C177";
+    dkfont.style.color = "#555169";
+    
+}
+
+const cnclbtn = document.querySelector(".cancel-button");
+let txtara = document.querySelector(".note");
+const svebtn = document.querySelector(".save-button");
 
 function cancel(){
-    //hide text area, save, and cancel buttons
+    cnclbtn.style.display = "none";
+    txtara.style.display = "none";
+    svebtn.style.display = "none";
+    
 
 }
+
+const nwbtn = document.querySelector(".new-button");
 
 function New_Note(){
-    //reveal text area, save, and cancel buttons
+    cnclbtn.style.display = "inline-block";
+    txtara.style.display = "inline-block";
+    svebtn.style.display = "inline-block";
+    console.log(txtara);
+    txtara.value = "Write Notes here";
 
 }
 
+
+
 function save(){
-    //alert user they are about to save note
-    //prompt for the title
-    //add JS object to notesArray with title and text in textarea as body
-    //add list item to sidebar with title of object
+    
 }
 
 function list_search(){
@@ -42,6 +86,13 @@ let note2 = {
     body: "Note 2 begins here",
 };
 
-let notesArray = [note1,note2]
+let notesArray = [note1,note2];
+
+
+
+drkbtn.addEventListener("click",dark2light2dark);
+cnclbtn.addEventListener("click",cancel);
+nwbtn.addEventListener("click",New_Note);
+svebtn.addEventListener("click",save);
 
 
