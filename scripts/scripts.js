@@ -1,12 +1,17 @@
+let note1 = {
+    title: "note one",
+    body: "this is my first note",
+};
 
+let note2 = {
+    title: "note 2",
+    body: "Note 2 begins here",
+};
 
-
-
-
+let notesArray = [note1,note2];
 
 
 //console.log(drkbtn);
-
 
 const drkbtn = document.querySelector(".Dark-button");
 const bcknotes = document.querySelector(".notes");
@@ -68,6 +73,9 @@ function New_Note(){
 
 
 function save(){
+    alert("You are trying to save your note.");
+    let title = prompt("Please enter the note's title");
+
     
 }
 
@@ -75,19 +83,6 @@ function list_search(){
     //search through notesArray and find object usig title, then display text in tex area
 
 }
-
-let note1 = {
-    title: "note one",
-    body: "this is my first note",
-};
-
-let note2 = {
-    title: "note 2",
-    body: "Note 2 begins here",
-};
-
-let notesArray = [note1,note2];
-
 
 
 drkbtn.addEventListener("click",dark2light2dark);
