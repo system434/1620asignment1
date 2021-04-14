@@ -1,14 +1,14 @@
 let note1 = {
     title: "note one",
-    body: "this is my first note",
+    body: "Write Notes here",
 };
 
-let note2 = {
-    title: "note 2",
-    body: "Note 2 begins here",
+let notetemplate = {
+    title: "",
+    body: "",
 };
 
-let notesArray = [note1,note2];
+let notesArray = [note1];
 
 const drkbtn = document.querySelector(".Dark-button");
 const bcknotes = document.querySelector(".notes");
@@ -67,15 +67,26 @@ function New_Note(){
 
 }
 
+
+let mynotes = document.querySelector("#listnotes");
+
 function save(){
     alert("You are trying to save your note.");
     let title = prompt("Please enter the note's title");
-    note2.title = title;
-    note2.body = txtara.value;
 
-    console.log(note2.title);
-    console.log(note2.body);
-    
+    const newnte = Object.create(notetemplate);
+    newnte.title = title;
+    newnte.body = txtara.value;
+
+    notesArray.push(newnte);
+    console.log(notesArray);
+
+
+    let newli = document.createElement("li");
+    mynotes.appendChild(newli)
+    newli.textContent = newnte.title;
+    txtara.value = newnte.body;
+
     
 }
 
